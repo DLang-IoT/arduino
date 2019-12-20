@@ -75,7 +75,8 @@ If an exception occurrs, the execution stops.
 ## Example: 
 ### Read potentiometer value to turn on a LED
 ````d
-import gpio;
+import arduino;
+import std.stdio;
 import core.thread;
 
 void main() {
@@ -93,13 +94,13 @@ void main() {
     /* wait 3 seconds before terminating */
     Thread.sleep(waitTime.seconds);
     /* unexport GPIO pin 12 */
-    gpio.unexport(12);
+    arduino.unexport(12);
 }
 ````
 
 ### Waiting until a button is pressed to power on a LED
 ````d
-import gpio;
+import arduino;
 import std.stdio;
 import core.thread;
 
